@@ -1,0 +1,35 @@
+{
+  "name": "Swastika",
+  "version": "1.0.0",
+  "description": "ASP.Net Core Starter Kit and Angular 4 Single Page Applicaiton (SPA)",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/animations": "^4.3.0",
+    "@angular/common": "~4.3.0",
+    "@angular/compiler": "~4.3.0",
+    "@angular/core": "~4.3.0",
+    "@angular/forms": "~4.3.0",
+    "@angular/http": "~4.3.0",
+    "@angular/platform-browser": "~4.3.0",
+    "@angular/platform-browser-dynamic": "~4.3.0",
+    "@angular/router": "~4.3.0",
+    "angular-in-memory-web-api": "^0.3.1",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "ionicons": "^3.0.0",
+    "ngx-toastr": "^5.3.0",
+    "octicons": "^5.0.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.4.2",
+    "systemjs": "^0.20.15",
+    "typescript": "^2.4.1",
+    "zone.js": "^0.8.13"
+  },
+  "devDependencies": {
+    "typescript": "^2.4.1",
+    "tslint": "^5.5.0"
+  },
+  "repository": {}
+}

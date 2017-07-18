@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Swastika.Web.Start.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-area="User" asp-controller="Account" asp-action="Logout" asp-route-returnurl="/" method="post" id="logoutForm" class="navbar-right">
+        @*<ul class="nav navbar-nav navbar-right">*@
+        <li class="nav-item">
+            <a asp-area="Portal" asp-controller="Home" asp-action="Index" title="Portal" class="nav-link">
+                <i class="now-ui-icons users_single-02"></i>
+                <p>Hello @UserManager.GetUserName(User)!</p>
+            </a>
+        </li>
+        @*<li class="nav-item">
+
+            <button type="submit" class="navbar-link" class="nav-link">
+                <i class="now-ui-icons sport_user-run"></i>
+                <p>Log out</p>
+            </button>
+        </li>*@
+        @*</ul>*@
+    </form>
+}
+else
+{
+    @*<ul class="nav navbar-nav navbar-right">*@
+    <li class="nav-item">
+
+        <a asp-area="User" asp-controller="Account" asp-action="Register" class="nav-link">
+            <i class="now-ui-icons users_single-02"></i>
+            <p>Register</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a asp-area="User" asp-controller="Account" asp-action="Login" class="nav-link">
+            <i class="now-ui-icons objects_key-25"></i>
+            <p>Log in</p>
+        </a>
+    </li>
+        @*</ul>*@
+}
