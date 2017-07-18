@@ -26,8 +26,7 @@
     <Content Include="node_modules\**\*" Exclude="node_modules\**\*.ts">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="wwwroot\lib\**\*" Exclude="wwwroot\lib\**\*.ts">
-    </Content>
+    <Content Include="wwwroot\lib\**\*" Exclude="wwwroot\lib\**\*.ts" />
   </ItemGroup>
 
   <ItemGroup>
