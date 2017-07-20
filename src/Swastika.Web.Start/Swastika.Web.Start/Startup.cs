@@ -76,18 +76,30 @@ namespace Swastika.Web.Start
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
-
+            app.MapWhen(context => context.Request.Path.Value.StartsWith("/Dash1"), builder =>
+            {
+                builder.UseMvc(routes =>
+                {
+                    routes.MapSpaFallbackRoute("spa-fallback", new { area = "PortalSpa", controller = "Home", action = "Index" });
+                });
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "areaRoute",
                     template: "{area:exists}/{controller=Home}/{action=Index}");
+
                 routes.MapRoute(
                     name: "areaRoute2",
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                //routes.MapSpaFallbackRoute(
+                //    name: "spa-fallback",
+                //    defaults: new { area = "PortalSpa", controller = "Home", action = "Index" });
             });
         }
     }
