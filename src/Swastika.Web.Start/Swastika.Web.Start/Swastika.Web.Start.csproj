@@ -48,6 +48,7 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ClientApp\portal\components\pages\contents\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\dist\" />
   </ItemGroup>

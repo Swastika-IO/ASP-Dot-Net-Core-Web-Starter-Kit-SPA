@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import 'zone.js';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './portal/app.module';
+import { AppModule } from './portal/app.module.client';
 
 if (module['hot']) {
     module['hot'].accept();
