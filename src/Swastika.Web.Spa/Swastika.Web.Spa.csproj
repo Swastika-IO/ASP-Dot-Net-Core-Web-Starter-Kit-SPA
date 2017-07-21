@@ -17,7 +17,9 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ClientApp\app\modules\" />
+    <Folder Include="ClientApp\app\modules\core\services\" />
+    <Folder Include="ClientApp\app\modules\portal\components\" />
+    <Folder Include="ClientApp\app\shared\" />
   </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <Exec Command="node --version" ContinueOnError="true">
